@@ -1,0 +1,34 @@
+@import 'tailwindcss';
+.viewPaste-container{
+    @apply
+    w-full flex flex-col items-center mt-5
+}
+.VPcard-container{
+    @apply 
+
+    
+    bg-[#1b1b1e]
+    w-[50%] p-5 
+    flex flex-col gap-[25px]
+    rounded-lg;
+}
+.vp-title{
+    @apply
+    p-5
+    text-2xl font-bold
+rounded-xl;
+    backdrop-filter: blur(25px) saturate(70%);
+    -webkit-backdrop-filter: blur(25px) saturate(51%);
+    background-color: rgba(100, 100, 100, 0.2);
+
+}
+.vp-content{
+    @apply
+    bg-[#1b1b1e]
+    p-5
+    rounded-xl
+    min-h-[350px];
+    backdrop-filter: blur(25px) saturate(70%);
+    -webkit-backdrop-filter: blur(25px) saturate(51%);
+    background-color: rgba(100, 100, 100, 0.2);
+}

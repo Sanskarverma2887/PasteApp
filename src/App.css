@@ -1,0 +1,5 @@
+@import "tailwindcss";
+.main-container {
+  @apply h-full w-full;
+ 
+}

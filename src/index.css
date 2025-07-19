@@ -1,0 +1,14 @@
+@import "tailwindcss";
+#root{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    @apply
+    text-[#fbfbfb]
+}
+body{
+    /* @apply */
+    background-color: #0A090E ;
+ 
+}

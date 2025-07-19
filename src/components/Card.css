@@ -1,0 +1,69 @@
+@import "tailwindcss";
+.card-container {
+  @apply w-full 
+    p-6 pt-7 pb-7
+    grid grid-cols-2  gap-5
+    cursor-pointer
+    rounded-[30px];
+  backdrop-filter: blur(25px) saturate(70%);
+  -webkit-backdrop-filter: blur(25px) saturate(51%);
+  background-color: rgba(100, 100, 100, 0.2);
+  transition: all 250ms ease-in-out;
+}
+.card-title {
+  @apply font-bold
+  text-[#f56e0f]
+    text-3xl italic;
+}
+.btn-tray {
+  @apply col-start-2 row-start-1 justify-self-end 
+    flex flex-row
+    gap-2;
+}
+.btn {
+  @apply  text-[#878787] backdrop-blur-[25px] saturate-95
+    p-2 rounded-2xl
+    cursor-pointer;
+
+    backdrop-filter: blur(25px) saturate(70%);
+  -webkit-backdrop-filter: blur(25px) saturate(51%);
+  background-color: rgba(100, 100, 100, 0.2);
+
+}
+.card-container:hover{
+    transform: translateY(-5px);
+}
+.line{
+    @apply
+    w-0 opacity-0
+    p-0.5
+    rounded-lg;
+    transition: all 400ms ease-in-out;
+    
+}
+.btn:hover .line{
+    @apply
+    bg-[#fa6800]
+    opacity-100
+    w-[100%];
+    box-shadow: 0 0 4px #fa6800;
+}
+.btn:hover{
+    @apply
+    text-[#fa6800];
+    transition: all 400ms ease-in-out;
+    text-shadow: 0 0 4px #fa6800;
+
+    
+}
+.createdAt{
+    @apply
+    text-lg font-medium
+    flex flex-row items-center gap-2
+    justify-self-end
+}
+.date-icon{
+    width: 25px;
+    height: 25px;
+
+}

@@ -1,0 +1,19 @@
+@import "tailwindcss";
+.searchbar {
+  @apply 
+  bg-[#1b1b1e] 
+    rounded-lg
+    pl-5
+    pt-2.5 pb-2.5 col-span-2;
+
+}
+.paste-btn {
+  @apply
+   bg-[#f56e0f] rounded-lg p-1.5 cursor-pointer;
+}
+#text-area {
+  @apply 
+    rounded-lg pl-5 pt-3    w-full 
+     bg-[#1b1b1e]
+    self-center;
+}
