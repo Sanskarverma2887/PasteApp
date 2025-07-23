@@ -54,7 +54,7 @@ const Home = () => {
   return (
     <>
       <div className="w-full flex flex-row justify-center mt-5">
-        <div className="w-[60%] grid grid-cols-3 gap-x-2">
+        <div className="md:w-[60%] w-[90%] grid grid-cols-3 gap-x-2">
           <input
             type="text"
             name=""

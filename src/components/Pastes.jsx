@@ -20,22 +20,24 @@ const Pastes = () => {
         type="text"
         name="input"
         placeholder="search"
-        className="searchbar w-[60%]"
+        className="searchbar sm:w-[60%] w-[90%]"
         onChange={handleInput}
       />
-      <div className="w-[60%] p-5 rounded-lg gap-[15px] flex flex-col mt-5 bg-[#1b1b1e]">
+      <div className="sm:w-[60%] w-[90%] p-5 rounded-lg gap-[15px] flex flex-col mt-5 bg-[#1b1b1e]">
         {searchVal === "" ? (
           pastes.length === 0 ? (
             <p className="text-white text-center">No pastes available.</p>
           ) : (
             pastes.map((paste) => (
-              <Card
+                <Card
                 key={paste.id}
                 title={paste.title}
                 desc={paste.content}
                 id={paste.id}
                 createdAt={paste.createdAt}
               />
+              
+              
             ))
           )
         ) : filteredData.length === 0 ? (

@@ -2,27 +2,32 @@
 .card-container {
   @apply w-full 
     p-6 pt-7 pb-7
-    grid grid-cols-2  gap-5
-    cursor-pointer
+    grid grid-cols-2  gap-5 
+    cursor-pointer 
     rounded-[30px];
+    transform: translateY(0);
   backdrop-filter: blur(25px) saturate(70%);
   -webkit-backdrop-filter: blur(25px) saturate(51%);
   background-color: rgba(100, 100, 100, 0.2);
-  transition: all 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
 }
 .card-title {
   @apply font-bold
   text-[#f56e0f]
-    text-3xl italic;
+  md:text-3xl text-2xl  italic;
+
 }
 .btn-tray {
-  @apply col-start-2 row-start-1 justify-self-end 
-    flex flex-row
-    gap-2;
+  @apply md:col-start-2 md:row-start-1 md:justify-self-end 
+    md:flex md:flex-row hidden relative
+   gap-2;
 }
+
 .btn {
-  @apply  text-[#878787] backdrop-blur-[25px] saturate-95
-    p-2 rounded-2xl
+  @apply  
+  text-center
+  md:text-[#878787] backdrop-blur-[25px] saturate-95 text-[#fbfbfb]
+    p-2 rounded-2xl 
     cursor-pointer;
 
     backdrop-filter: blur(25px) saturate(70%);
@@ -58,12 +63,46 @@
 }
 .createdAt{
     @apply
-    text-lg font-medium
+    md:text-lg font-medium text-base
     flex flex-row items-center gap-2
-    justify-self-end
+    md:justify-self-end  justify-self-center
+    col-start-2 row-start-2
 }
 .date-icon{
     width: 25px;
     height: 25px;
 
+}
+.card-desc{
+  @apply
+  col-start-1 row-start-2
+}
+.myBtn{
+  @apply
+    md:hidden w-full text-[#fbfbfb]
+   backdrop-blur-[25px] saturate-95 
+    p-2 rounded-2xl h-auto
+    cursor-pointer;
+    backdrop-filter: blur(25px) saturate(70%);
+    background-color: rgba(100, 100, 100, 0.2);
+}
+.overlay{
+@apply
+flex flex-col items-center
+;
+  opacity: 1;
+  backdrop-filter: blur(25px) saturate(70%);
+    background-color: rgba(100, 100, 100, 0.5);
+  transition:opacity 200ms  ease-in-out;
+  pointer-events: auto;
+}
+
+.hide{
+  @apply
+  hidden
+  /* opacity-0 */
+}
+.unhide{
+  @apply
+  flex
 }
